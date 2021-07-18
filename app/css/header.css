@@ -1,0 +1,30 @@
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.6;
+  font-family: Arial, "Helvetica";
+  overflow-x: hidden; }
+
+.text-right {
+  text-align: right; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.hidden {
+  display: none; }
+
+.typed-cursor {
+  opacity: 0; }
+
+ul {
+  position: 0;
+  margin: 0;
+  list-style-type: none; }
+
+a, a:focus, a:hover, a:active, a:visited {
+  text-decoration: none; }
