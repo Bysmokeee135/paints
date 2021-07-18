@@ -34,7 +34,7 @@ body
 	color: #4c5966
 	background-color: #f7f8f9
 	position: relative
-	min-width: 375px
+	min-width: 320px
 	margin: 0 auto
 	overflow: hidden
 
@@ -142,6 +142,7 @@ header
 				vertical-align: middle
 				position: relative
 				top: 2px
+				margin-bottom: 0
 			.search
 				display: inline-block
 				vertical-align: middle
@@ -1248,7 +1249,7 @@ h2
 	font-weight: 700
 	color: #343a40
 	font-size: 36px 
-	line-height: 26px 
+	line-height: 46px 
 	margin-top: 0
 	margin-bottom: 0px
 
@@ -1957,9 +1958,14 @@ main .tools.tools-slider
 			height: 300px
 			width: 100%
 			.icon 
+				opacity: .5
 				img 
+					height: auto
 					width: auto
 					margin: 0 auto
+			&:active, &:focus, &:hover 
+				.icon 
+					opacity: 1		
 
 input
 	&[type="number"]
@@ -2449,14 +2455,20 @@ input
 	width: 100%
 	justify-content: space-between
 	&.news-wrap
+		margin-left: 20px
 		.case 
 			max-width: unset
 			width: 49%
 			flex: 0 0 49%
 			display: flex
-			margin-bottom: 10px
+			margin-bottom: 30px
+			align-items: center
+			.descr
+				padding-top: 0
+				padding-bottom: 0
 			picture 
 				max-width: 300px 
+				min-width: 300px
 				height: 190px
 			h3 
 				font-size: 18px
@@ -2466,7 +2478,7 @@ input
 					margin: 0
 	.case 
 		position: relative
-		flex: 1 0 50%
+		flex: 0 0 49%
 		max-width: 495px 
 		width: 100%
 		margin-bottom: 10px
@@ -2560,6 +2572,11 @@ input
 		position: relative				
 
 
+.page-update header .main-nav .row
+	justify-content: space-between
+	.col-md-9
+		width: 100%	
+
 header .main-nav .menu-wrap nav > li 
 	.mega-menu.mega-list-menu
 		padding: 0
@@ -2568,6 +2585,8 @@ header .main-nav .menu-wrap nav > li
 		text-align: left
 		top: 60px
 		box-shadow: 0 0 60px 10px rgba(0,0,0,.05)
+		.list-menu
+			display: block
 		&:before 
 			content: ''
 			position: absolute 

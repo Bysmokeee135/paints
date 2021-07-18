@@ -26,7 +26,9 @@ $(function() {
 			},
 			navText: '‹›'
 		})
-
+		$('.tools-slider .tools-items-wrap .item').click(function(){
+			return false;
+		})
 		$('.new-products .slider-wrap').owlCarousel({
 			loop:true,
 			margin:0,

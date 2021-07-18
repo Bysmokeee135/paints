@@ -151,6 +151,10 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	/**/
+	.cases-wrap.news-wrap .case picture
+		min-width: 225px
+		max-width: 225px 
+		height: 170px	
 	footer .top-side .menu-wrap
 		margin-left: 40px		
 	main .products .products-wrap .product-item
@@ -168,10 +172,20 @@
 	.colors-theme .color-theme-items-wrap .color-theme-item
 		min-width: 325px 
 		max-width: 325px 
-		height: 325px		
+		height: 325px	
+	.page-update header .main-nav .menu-wrap > nav > li > a	
+		padding-left: 5px
+		padding-right: 5px
+	.page-update header .main-nav .menu-wrap nav a
+		font-size: 14px				
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
+	.cases-wrap .case 
+		picture
+			height: 145px
+		.descr
+			padding: 10px		
 	main .category-grid.has-aside .cat-wrap .cat-item
 		height: 240px
 	main .category-grid.has-aside .cat-wrap .cat-item.item picture
@@ -341,10 +355,123 @@
 		line-height: 10px
 		svg 
 			width: 25px		
+	.cases-wrap.news-wrap .case
+		width: 100%
+		flex: 0 0 100%
+		display: block	
+		text-align: center
+		.descr-text
+			justify-content: center
+	.cases-wrap.news-wrap .case picture
+		margin: 0 auto 10px
+		max-width: 500px
+	.cases-wrap.news-wrap
+		margin-left: 0		
+	.cases-wrap.news-wrap
+		width: auto				
 				
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/*Disable Animation on Mobile Devices*/
+	body .breadcrubms nav a.home svg
+		margin-right: 0
+		top: 0
+	body .breadcrubms nav a:after
+		margin-left: 3px
+		margin-right: 3px
+	.page-update .breadcrubms
+		margin: 0 -5px
+	main .tools.tools-slider .tools-items-wrap .owl-nav > div
+		width: 30px
+		height: 30px
+		line-height: 28px
+		font-size: 30px
+	main .tools.tools-slider .tools-items-wrap .owl-nav > div.owl-next
+		top: 95px!important
+	.resources .btns-wrap .btn
+		padding: 0 10px
+	main .tools h2
+		margin-bottom: 20px
+	.paint-calculator
+		margin-left: -5px			
+	main .tools.tools-slider .tools-items-wrap .owl-nav > div.owl-next
+		right: 15px						
+	.page-update header .main-nav .menu-wrap nav a
+		font-size: 20px
+		display: flex
+		width: 100%
+	.page-update header .main-nav
+		padding-top: 10px
+	header .main-nav .menu-wrap nav > li .mega-menu.mega-list-menu
+		box-shadow: unset
+		border: none
+		&::before
+			display: none
+	.mega-list-menu	
+		position: relative
+		display: block!important
+		.list-menu
+			display: none!important
+		&:after 
+			content: ''
+			position: absolute
+			width: 17px
+			height: 10px
+			right: 0
+			// top: 26px
+			top: -40px
+			transform: rotate(180deg)
+			background-image: url('../img/arrowDropdown.png')
+			background-repeat: no-repeat
+			background-position: center	
+	footer .top-side .logo
+		display: block
+		text-align: center				
+	.page-update header .main-nav .menu-wrap nav a:hover, .page-update header .main-nav .menu-wrap nav a:active, .page-update header .main-nav .menu-wrap nav a:focus
+		border-color: transparent		
+		~ .mega-list-menu
+			&:after 	
+				transform: rotate(0deg)
+			.list-menu
+				display: block!important		
+	.page-update footer .top-side
+		.text-right
+			text-align: center
+			.menu-wrap
+				margin-left: 10px
+				margin-right: 10px
+	.page-update footer .bot-side .copyright .subcopyr
+		text-align: center
+	.page-update footer .top-side .row
+		.col-md-3 
+			width: 100%							
+	header .main-nav .menu-wrap nav > li .mega-menu.mega-list-menu .list-menu
+		padding-left: 0
+		padding-right: 0
+	header .main-nav .menu-wrap nav > li .mega-menu.mega-list-menu a
+		padding-left: 5px
+		padding-right: 5px		
+	.page-update header .main-nav .menu-wrap 
+		> nav
+			padding-left: 20px
+			padding-right: 20px
+			background-color: #fff
+			border-bottom: 2px solid #eaeaea
+		> nav > li 			
+			> a
+				border-bottom: 1px solid #f0f2f4	
+				background-color: #fff
+				position: relative	
+			&:last-of-type
+				a
+					border-bottom: none	
+	.page-update header .main-nav .menu-wrap nav > li
+		text-align: left		
+	.page-update .menu-wrap nav.list-menu
+		position: relative	
+		top: 0
+	header .main-nav .menu-wrap nav > li .mega-menu.mega-list-menu
+		top: 0	
 	.paint-calculator.white-paint-calculator .calculator-wrap .btns-wrap
 		margin-top: 20px	
 		padding-top: 20px
@@ -404,13 +531,6 @@
 		padding-top: 30px
 		font-size: 18px
 		line-height: 22px		
-	.cases-wrap.news-wrap .case
-		width: 100%
-		flex: 0 0 100%
-		display: block	
-	.cases-wrap.news-wrap .case picture
-		margin: 0 auto
-		max-width: 100%	
 	.paint-calculator .btn
 		margin: 0 auto	
 	.browse-products .item .descr
@@ -579,7 +699,8 @@
 	main .tools .tools-items-wrap
 		flex-wrap: wrap	
 	main .tools .tools-items-wrap .item
-		width: 50%	
+		width: 100%
+		margin: 20px auto 0	
 	main .new-products .slider-wrap .owl-dots
 		left: 0
 		right: 0
@@ -630,7 +751,9 @@
 	html .top-stories .item
 		margin-bottom: 20px	
 	body .widget-aside
-		display: none
+		// display: none
+	.sub-page.post-page aside	
+		padding-top: 20px
 	.sub-page.post-page main	
 		padding-top: 20px
 	body .article-wrap h1
