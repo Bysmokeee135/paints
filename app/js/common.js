@@ -5,6 +5,15 @@
 
 $(function() {
 	//inner page 
+		$('.mega-menu').click(function(){
+			$(this).find('.list-menu').slideToggle();
+			if($(this).hasClass('opened')) {
+				$(this).removeClass('opened')
+			} else {
+				$(this).addClass('opened')
+			}
+		})
+
 		$('.category-grid .slider-wrap.owl-carousel, .home-slider .slider-wrap.owl-carousel').owlCarousel({
 			loop:true,
 			margin:0,
